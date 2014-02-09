@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="jCorner.css" type="text/css" />
+
+        <style>
+            body {
+                background-color: #ccc;
+            }
+            .page {
+                width: 200px;
+                height: 150px;
+                margin: 20px;
+                float: left;
+            }
+            #a {
+                background-color: #11A7FC;
+            }
+            #b {
+                background-color: #95D127;
+            }
+            #c {
+                background-color: #FBFE1E;
+            }
+            #d {
+                background-color: #FF8638;
+            }
+            #e {
+                background-color: #EE3551;
+            }
+            #f {
+                background-color: #fff;
+            }
+
+            .page {
+                position: relative;
+            }
+        </style>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="jCorner.js" type="text/javascript"></script>
+    
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#a').jCorner({
+background: '#ccc',
+link: 'http://zhangwenli.com',
+size: 80,
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+        <div id="a" class="page"></div>
+        <div id="b" class="page"></div>
+        <div id="c" class="page"></div>
+        <div id="d" class="page"></div>
+        <div id="e" class="page"></div>
+        <div id="f" class="page"></div>
+    </body>
+</html>
+
