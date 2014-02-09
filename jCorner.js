@@ -11,7 +11,7 @@
             var id = settings.id === undefined ? '' : ' id="' 
                     + settings.id + '"';
             var a_start = settings.link === undefined ? '' : '<a href="'
-                    + settings.link + '">';
+                    + settings.link + '" target="_blank">';
             var a_end = settings.link === undefined ? '' : '</a>';
             var element = '<div' + id + ' class="jCorner" style="width: '
                     + settings.size * 2 + 'px; height: ' + settings.size
@@ -28,10 +28,8 @@
                     + settings.size + 'px 0 0; left: ' + settings.size 
                     + 'px; top: -' + settings.size + 'px;"></div>' 
                     + a_end;
-            console.log(element);
 
-            return $(this).append(element);
+            return $(this).append(element).css('position', 'relative');
         });
     }
 }(jQuery));
-
