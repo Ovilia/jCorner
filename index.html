@@ -1,38 +1,139 @@
 <html>
     <head>
         <link rel="stylesheet" href="jCorner.css" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700|Roboto:300,700' rel='stylesheet' type='text/css'>
 
         <style>
             body {
                 background-color: #ccc;
-            }
-            .page {
-                width: 200px;
-                height: 150px;
-                margin: 20px;
-                float: left;
-            }
-            #a {
-                background-color: #11A7FC;
-            }
-            #b {
-                background-color: #95D127;
-            }
-            #c {
-                background-color: #FBFE1E;
-            }
-            #d {
-                background-color: #FF8638;
-            }
-            #e {
-                background-color: #EE3551;
-            }
-            #f {
-                background-color: #fff;
+                font-family: 'Roboto', Arial;
+                font-size: 20px;
+                text-shadow: 1px 1px #fff;
             }
 
+            #title {
+                width: 80%;
+                margin: 50px auto;
+                font-family: 'Oleo Script Swash Caps', Arial;
+                font-size: 120px;
+                text-shadow: 2px 5px rgba(100, 100, 100, 0.5);
+            }
             .page {
+                width: 12%;
+                text-align: center;
+                padding: 20px 0;
+                float: left;
+                margin-right: 2.5%;
+                min-width: 100px;
+                margin-bottom: 10px;
                 position: relative;
+            }
+            
+            .code, pre {
+                font-family: monospace, Arial;
+                border: 2px dotted;
+                border-radius: 5px;
+                font-size: 15px;
+                max-width: 100%;
+                overflow-x: scroll;
+                color: #666;
+            }
+            
+            pre {
+                padding: 10px;
+            }
+            
+            a {
+                text-decoration: none;
+                border-bottom: 2px dashed;
+            }
+            
+            .a {
+                background-color: #11A7FC;
+            }
+            .b {
+                background-color: #95D127;
+            }
+            .c {
+                background-color: #fff000;
+            }
+            .d {
+                background-color: #FF8638;
+            }
+            .e {
+                background-color: #EE3551;
+            }
+            .f {
+                background-color: #EE50CF;
+            }
+            .g {
+                background-color: #B544EE;
+                margin-right: 0;
+            }
+            .a_c {
+                color: #11A7FC;
+                font-weight: bold;
+            }
+            .b_c {
+                color: #95D127;
+                font-weight: bold;
+            }
+            .c_c {
+                color: #fff000;
+                font-weight: bold;
+                text-shadow: 1px 1px #666;
+            }
+            .d_c {
+                color: #FF8638;
+                font-weight: bold;
+            }
+            .e_c {
+                color: #EE3551;
+                font-weight: bold;
+            }
+            .f_c {
+                color: #EE50CF;
+                font-weight: bold;
+            }
+            .g_c {
+                color: #B544EE;
+                font-weight: bold;
+            }
+
+            #subtitle {
+                text-align: center;
+                background-color: #eee;
+                background: url('example-background.png');
+                width: 500px;
+                padding: 50px 0;
+                max-width: 80%;
+                margin: 0 auto;
+                margin-bottom: 100px;
+                font-family: 'Oleo Script Swash Caps', Arial;
+                font-size: 40px;
+                text-shadow: 1px 3px rgba(100, 100, 100, 0.5);
+            }
+            h1 {
+                font-size: 60px;
+                margin: 0;
+                font-family: 'Oleo Script Swash Caps', Arial;
+                text-shadow: 1px 1px #666;
+            }
+            h2 {
+                margin: 10px 0 5px 0;
+            }
+            
+            p {
+                margin: 15px 0;
+            }
+
+            .paper {
+                width: 70%;
+                padding: 50px 5%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                background-color: #eee;
+                background: url('example-background.png');
             }
         </style>
 
@@ -41,22 +142,103 @@
     
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#a').jCorner({
-background: '#ccc',
-link: 'http://zhangwenli.com',
-size: 80,
+                $('.page').jCorner({
+                    background: '#ccc',
+                    size: 25
+                });
+                $('#subtitle').jCorner({
+                    background: '#ccc',
+                    size: 40,
+                    link: 'https://github.com/Ovilia/jCorner'
+                });
+                $('.paper').jCorner({
+                    background: '#ccc',
+                    size: 25
                 });
             });
         </script>
         
     </head>
     <body>
-        <div id="a" class="page"></div>
-        <div id="b" class="page"></div>
-        <div id="c" class="page"></div>
-        <div id="d" class="page"></div>
-        <div id="e" class="page"></div>
-        <div id="f" class="page"></div>
+        <div id="title">
+            <div class="page a">j</div>
+            <div class="page b">C</div>
+            <div class="page c">o</div>
+            <div class="page d">r</div>
+            <div class="page e">n</div>
+            <div class="page f">e</div>
+            <div class="page g">r</div>
+            <div style="clear: both"></div>
+        </div>
+        <div id="subtitle">A jQuery Plugin <br />to Fold Paper Corners</div>
+
+        <div class="paper">
+            <h1 class="a_c">Features</h1>
+            <p>jCover is a jQuery plugin to create a flat designed <span class="a_c">paper folding effect</span> at the bottom-right corner, which is useful for both stylishness and a hint for a link.</p>
+            <p>It uses <span class="a_c">CSS border tricks</span> to achieve the effect, without using any image, which enables us to create corners of any size.</p>
+            <p>It's a <span class="a_c">tiny library</span> with minified JavaScript file of <span class="a_c">818 bytes</span> and CSS file of <span class="a_c">377 bytes</span>.</p>
+        </div>
+        
+        <div class="paper">
+            <h1 class="b_c">Hello World</h1>
+            <p>To use jCorner, the following files should always be included.</p>
+            <pre>
+&lt;script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript">&lt;/script&gt
+&lt;script src="jCorner.js" type="text/javascript">&lt;/script&gt
+&lt;link rel="stylesheet" href="jCorner.css" type="text/css" /&gt</pre>
+            <p>Suppose we want to add a corner to an element with id <span class="code b_c">paper</span> in the HTML, jCorner makes it as simple as:</p>
+            <p>HTML:</p>
+            <pre>&lt;div id="paper"&gt&lt;/div&gt</pre>
+            <p>JavaScript:</p>
+            <pre>$('#paper').jCover();</pre>
+            <p></p>
+        </div>
+        
+        <div class="paper">
+            <h1 class="c_c">Download</h1>
+            <p>jCorner is an open-source project under MIT License.</p>
+            <p><a href="http://github.com/ovilia/jCorner" target="_blank" class="c_c">Download at GitHub</a></p>
+        </div>
+        
+        <div class="paper">
+            <h1 class="d_c">Documentation</h1>
+            <p>There're 4 parameters to set with jCorner, none of which is compulsory. Default values are:</p>
+            <pre>
+size: 40;
+id: undefined;
+link: undefined;
+background: '#fff'; </pre>
+            <p>Example:</p>
+            <pre>$('#paper').jCorner({
+    size: 25,
+    background: 'black'
+});
+
+$('#paper').jCorner({
+    background: '#ffcc00',
+    link: 'about.html',
+    id: 'about'
+});</pre>
+            
+            <h2 class="d_c">size</h2>
+            <p>As its name suggests, the <span class="code">size</span> parameter defines how big is the corder, in pixels.</p>
+            <h2 class="d_c">id</h2>
+            <p>It might be useful to set an id to the corner. We can do this by setting the <span class="code">id</span> parameter. If it is <span class="code">undefined</span>, there would be no id attribute of the corner.</p>
+            <h2 class="d_c">link</h2>
+            <p>We may add a link to the corner so that it will open a new tab when the corner is clicked. The value of <span class="code">link</span> should be a string like <span class="code">"http://zhangwenli.com"</span>.</p>
+            <h2 class="d_c">background</h2>
+            <p>We usually need to set this parameter since the background in different web pages are different. For example, the <span class="code">background</span> is set to be <span class="code">"#ccc"</span> in this page.</p>
+        </div>
+        
+        <div class="paper">
+            <h1 class="e_c">About Author</h1>
+            <p>jCorner is developed by <a href="http://zhangwenli.com" target="_blank" class="e_c">Wenli Zhang</a>, a hobbyist Web front-end designer. Check her personal site for more information.</p>
+            <h2 class="e_c">Follow Her</h2>
+            <p>Follow her on <a href="http://instagram.com/oviliazhang" target="_blank" class="e_c">Instagram</a> or <a href="http://instagram.com/oviliazhang" target="_blank" class="e_c">Google Plus</a>.</p>
+            <p>Email <a href="mailto:me@zhangwenli.com" class="e_c">me@zhangwenli.com</a> if you wish to give her a <span class=e_c">dribbble invitation</span>!</p>
+            <h2 class="e_c">Notice</h2>
+            <p>Background image used in this page is designed by <a href="http://www.peax-webdesign.com/" target="_blank" class="e_c">Peax</a>.</p>
+        </div>
     </body>
 </html>
 
